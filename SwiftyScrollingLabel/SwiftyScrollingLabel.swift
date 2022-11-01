@@ -117,7 +117,7 @@ class SwiftyScrollingLabel: UIView {
     }, completion:  { _ in })
   }
   
-  func addConstraint(_ newView: UIView, toView: UIView, attribute: NSLayoutAttribute, constant: CGFloat) {
+  func addConstraint(_ newView: UIView, toView: UIView, attribute: NSLayoutConstraint.Attribute, constant: CGFloat) {
     let constraint =  NSLayoutConstraint(item: newView, attribute: attribute, relatedBy: .equal, toItem: toView, attribute: attribute, multiplier: 1.0, constant: constant)
     toView.addConstraint(constraint)
   }
@@ -128,4 +128,3 @@ class SwiftyScrollingLabel: UIView {
   }
   
 }
-
